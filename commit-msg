@@ -1,0 +1,5 @@
+#!/bin/sh
+
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+COMMIT_MSG_FILE=$1
+python .git/hooks/commit.msg.py "$BRANCH" "$COMMIT_MSG_FILE"
