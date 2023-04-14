@@ -1,4 +1,4 @@
-from commit_processor import parse_task_id
+from hook.commit_processor import parse_task_id
 
 
 def test_parse_task_id_takes_correct_id():
