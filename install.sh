@@ -11,9 +11,9 @@ cp -r "$script_dir/hook/commit_processor.py" "$installation_dir"
 
 strategy="insert_branch_name"
 
-if [ ! -z "$2" ]; then
+if [ -n "$2" ]; then
     strategy="$2"
-    echo "${strategy}" > "$installation_dir/proccessor.conf"
+    echo "${strategy}" > "$installation_dir/processor.conf"
 fi
 
 echo "Hook installed in ${target_repository_dir}. Strategy - ${strategy} will be used."
